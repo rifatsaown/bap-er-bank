@@ -11,4 +11,3 @@ document.getElementById('login').addEventListener('click', function(){
         document.getElementById('login-stats').innerText ="Wrong Email Or pass";
     }
 })
-

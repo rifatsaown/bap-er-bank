@@ -11,14 +11,48 @@
 
 <body>
     <header>
-        <h1 class="text-5xl text-center mt-12">Let's get some<span class="font-semibold text-purple-500"> 
+        <h1 class="text-5xl text-center mt-12">Let's get some<span class="font-semibold text-purple-500">
                 Moooooooney!!</span></h1>
     </header>
-    <main>
-        <section>
-            
+    <main class=" mx-auto w-2/4">
+        <!-- balance and transaction  -->
+        <section class="grid grid-cols-3 gap-4 mt-6">
+            <div class=" p-8 rounded bg-blue-300">
+                <p class="text-2xl">Deposit</p>
+                <p class="text-4xl">$<span id="deposit-total">00</span></p>
+            </div>
+            <div class=" p-8 rounded bg-red-400">
+                <p class="text-2xl">Withdraw</p>
+                <p class="text-4xl">$<span id="withdraw-total">00</span></p>
+            </div>
+            <div class=" p-8 rounded bg-green-500">
+                <p class="text-2xl">Balance</p>
+                <p class="text-4xl">$<spanc id="balance-total">1246</span></p>
+            </div>
+        </section>
+        <!-- deposit and withdraw -->
+        <section class="grid grid-cols-2 gap-4 mt-8">
+            <div class =" bg-pink-100 p-10 rounded ">
+                <p>Please Deposit</p>
+                <p class="text-xl ">
+                    <input type="number" id="input-deposit" placeholder="$ you want to deposit" class=" mb-4 w-full px-2 py-1">
+                </p>
+                <button id="button-deposit" class="bg-purple-600 text-white px-4 py-2 rounded">
+                    Deposit
+                </button>
+            </div>
+            <div class =" bg-yellow-100 p-10 rounded  ">
+                <p>Please Withdraw</p>
+                <p class="text-xl ">
+                    <input type="number" id="input-withdraw" placeholder="$ you want to withdraw" class=" mb-4 w-full px-2 py-1">
+                </p>
+                <button id="button-withdraw" class="bg-purple-600 text-white px-4 py-2 rounded">
+                    Withdraw
+                </button>
+            </div>
         </section>
     </main>
+    <script src="./banking.js"></script>
 </body>
 
 </html>
