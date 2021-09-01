@@ -1,12 +1,23 @@
-// deposit Money
-document.getElementById('button-deposit').addEventListener('click', function () {
+function getInputValue(){
     const inputDeposit = document.getElementById('input-deposit');
     const deposit = parseFloat(inputDeposit.value);
+    inputDeposit.value = '';
+    return deposit
+}
+
+
+
+// deposit Money
+document.getElementById('button-deposit').addEventListener('click', function () {
+    // const inputDeposit = document.getElementById('input-deposit');
+    // const deposit = parseFloat(inputDeposit.value);
+    const deposit = getInputValue()
+
 
     const previousDeposit = parseFloat(document.getElementById('deposit-total').innerText);
     const totalDeposit = deposit + previousDeposit;
     document.getElementById('deposit-total').innerText = totalDeposit
-    inputDeposit.value = '';
+    
 
     const previousBalance = parseFloat(document.getElementById('balance-total').innerText);
     const totalBalance = deposit + previousBalance;
