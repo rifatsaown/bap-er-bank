@@ -38,7 +38,7 @@ document.getElementById('button-deposit').addEventListener('click', function () 
 document.getElementById('button-withdraw').addEventListener('click', function () {
     const withdraw = getInputValue('input-withdraw');
     const previousBalance = balanceAmount();
-    if (withdraw > 0 && previousBalance > 0) {
+    if (withdraw > 0 && previousBalance > withdraw) {
         addAmount('withdraw-total', withdraw);
         balance(withdraw, false);
     }
